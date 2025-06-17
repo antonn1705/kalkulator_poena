@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulator Poena</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Dark Mode (via CSS variables toggle) -->
+  <style>
+    body.dark-mode {
+      background-color: #121212 !important;
+      color: #f0f0f0;
+    }
+    body.dark-mode .card {
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+    .card {
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .form-section {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+    }
+    
+  </style>
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <div class="card p-4">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Kalkulator bodova za upis - Opšta gimnazija</h2>
+        <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">🌓 Tema</button>
+      </div>
+
+      <div class="form-section">
+        <h4>Opšti uspjeh i ocjene</h4>
+
+        <!-- VII razred -->
+        <div class="row g-3 mb-2">
+          <div class="col-md-4">
+            <label for="avg7" class="form-label"><b>VII razred</b> (prosjek)</label>
+            <input type="number" id="avg7" class="form-control" step="0.01" min="1" max="5">
+          </div>
+        </div>
+        <div class="row g-3 mb-3">
+          <div class="col-md-3">
+            <label class="form-label">Maternji jezik</label>
+            <select id="maternji7" class="form-select">
+              <option value="">Izaberi</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Matematika</label>
+            <select id="matematika7" class="form-select">
+              <option value="">Izaberi</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Fizika</label>
+            <select id="fizika7" class="form-select">
+              <option value="">Izaberi</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Engleski</label>
+            <select id="engleski7" class="form-select">
+              <option value="">Izaberi</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option>
+            </select>
+          </div>
+        </div>
+        <hr>
+
+        <!-- VIII razred -->
+        <div class="row g-3 mb-2">
+          <div class="col-md-4">
+            <label for="avg8" class="form-label"><b>VIII razred</b> (prosjek)</label>
+            <input type="number" id="avg8" class="form-control" step="0.01" min="1" max="5">
+          </div>
+        </div>
+        <div class="row g-3 mb-3">
+          <div class="col-md-3">
+            <label class="form-label">Maternji jezik</label>
+            <select id="maternji8" class="form-select">
+              <option value="">Izaberi</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Matematika</label>
+            <select id="matematika8" class="form-select">
+              <option value="">Izaberi</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Fizika</label>
+            <select id="fizika8" class="form-select">
+              <option value="">Izaberi</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Engleski</label>
+            <select id="engleski8" class="form-select">
+              <option value="">Izaberi</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option>
+            </select>
+          </div>
+        </div>
+        <hr>
+
+        <!-- IX razred -->
+        <div class="row g-3 mb-2">
+          <div class="col-md-4">
+            <label for="avg9" class="form-label"><b>IX razred</b> (prosjek)</label>
+            <input type="number" id="avg9" class="form-control" step="0.01" min="1" max="5">
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-3">
+            <label class="form-label">Maternji jezik</label>
+            <select id="maternji9" class="form-select">
+              <option value="">Izaberi</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Matematika</label>
+            <select id="matematika9" class="form-select">
+              <option value="">Izaberi</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Fizika</label>
+            <select id="fizika9" class="form-select">
+              <option value="">Izaberi</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Engleski</label>
+            <select id="engleski9" class="form-select">
+              <option value="">Izaberi</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h4>Matura ocjene</h4>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label for="maternji" class="form-label">Maternji jezik</label>
+            <select id="maternji" class="form-select">
+              <option value="">Izaberi</option>
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="matematika" class="form-label">Matematika</label>
+            <select id="matematika" class="form-select">
+              <option value="">Izaberi</option>
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="fizika" class="form-label">Fizika</label>
+            <select id="fizika" class="form-select">
+              <option value="">Izaberi</option>
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h4>Luča diploma</h4>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="luca">
+          <label class="form-check-label" for="luca">Imam Luču</label>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="btn btn-primary px-4" onclick="izracunaj()">Izračunaj poene</button>
+        <h2 class="mt-3">Ukupno poena: <span id="rezultat">0</span></h2>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function poeniZaOcjenu(ocjena) {
+      switch(parseInt(ocjena)) {
+        case 5: return 10;
+        case 4: return 7;
+        case 3: return 4;
+        case 2: return 1;
+        default: return 0;
+      }
+    }
+
+
+    function izracunaj() {
+      const avg7 = parseFloat(document.getElementById('avg7').value) || 0;
+      const avg8 = parseFloat(document.getElementById('avg8').value) || 0;
+      const avg9 = parseFloat(document.getElementById('avg9').value) || 0;
+      const opstiUspjeh = 3*(avg7 + avg8 + avg9);
+
+      const mat = document.getElementById('matematika').value;
+      const jez = document.getElementById('maternji').value;
+      const fiz = document.getElementById('fizika').value;
+
+      const maturaPoeni = poeniZaOcjenu(mat) + poeniZaOcjenu(jez) + poeniZaOcjenu(fiz);
+
+      const luca = document.getElementById('luca').checked ? 12 : 0;
+
+      const jez7 = parseInt(document.getElementById('maternji7').value) || 0;
+      const jez8 = parseInt(document.getElementById('maternji8').value) || 0;
+      const jez9 = parseInt(document.getElementById('maternji9').value) || 0;
+
+      const mat7 = parseInt(document.getElementById('matematika7').value) || 0;
+      const mat8 = parseInt(document.getElementById('matematika8').value) || 0;
+      const mat9 = parseInt(document.getElementById('matematika9').value) || 0;
+
+      const fiz7 = parseInt(document.getElementById('fizika7').value) || 0;
+      const fiz8 = parseInt(document.getElementById('fizika8').value) || 0;
+      const fiz9 = parseInt(document.getElementById('fizika9').value) || 0;
+
+      const eng7 = parseInt(document.getElementById('engleski7').value) || 0;
+      const eng8 = parseInt(document.getElementById('engleski8').value) || 0;
+      const eng9 = parseInt(document.getElementById('engleski9').value) || 0;
+
+
+      const ukupno = opstiUspjeh + maturaPoeni + luca + (jez7 + jez8 + jez9 + mat7 + mat8 + mat9 + fiz7 + fiz8 + fiz9 + eng7 + eng8 + eng9)/2;
+      document.getElementById('rezultat').innerText = ukupno.toFixed(2);
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
