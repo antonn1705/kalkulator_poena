@@ -1,0 +1,36 @@
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #f0f0f0;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.form-section {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.language-switch {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+}
+
+@media (max-width: 576px) {
+  h2, h4 {
+    font-size: 1.25rem;
+  }
+  .btn {
+    width: 100%;
+  }
+}
